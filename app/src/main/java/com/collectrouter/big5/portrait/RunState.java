@@ -15,6 +15,8 @@ public class RunState {
     public static int PAGE_USERINFO_SHOW = 2;
     public static int PAGE_PORTRAIT_TEST = 3;
     public static int PAGE_PORTRAIT_TRAIN = 4;
+    public static int PAGE_CLICK_APP = 5;
+    public static int PAGE_TAGS_SHOW = 6;
 
 
     public void setState( int state ) {

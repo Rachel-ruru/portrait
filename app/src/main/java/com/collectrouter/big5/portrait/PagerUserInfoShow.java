@@ -20,6 +20,11 @@ public class PagerUserInfoShow implements MainPagerBase {
     }
 
     @Override
+    public void init() {
+
+    }
+
+    @Override
     public View getRootView() {
         LayoutInflater layoutInflater = LayoutInflater.from(mContext);
 

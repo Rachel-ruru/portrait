@@ -29,4 +29,9 @@ public class PagerPortraitTest implements MainPagerBase {
     public String getPageTitle() {
         return "Test Your Portrait";
     }
+
+    @Override
+    public void init() {
+
+    }
 }

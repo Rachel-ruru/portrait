@@ -27,6 +27,8 @@ public class MainPagerAdapter extends PagerAdapter {
         addPager( RunState.PAGE_USERINFO_SHOW, new PagerUserInfoShow(context), layoutInflater );
         addPager( RunState.PAGE_PORTRAIT_TEST, new PagerPortraitTest(context), layoutInflater );
         addPager( RunState.PAGE_PORTRAIT_TRAIN, new PagerPortraitTrain(context), layoutInflater );
+        addPager( RunState.PAGE_CLICK_APP, new PagerClickApp(context), layoutInflater );
+        addPager( RunState.PAGE_TAGS_SHOW, new PagerTagsShow(context), layoutInflater );
     }
 
     private void addPager(int nPageId, MainPagerBase pager, LayoutInflater layoutInflater) {
@@ -34,6 +36,14 @@ public class MainPagerAdapter extends PagerAdapter {
             return;
         }
         mapPager.put( nPageId, pager );
+    }
+
+    public void initItem( int pageId ) {
+        MainPagerBase mainPager = mapPager.get(pageId);
+        if (mainPager == null) {
+            return;
+        }
+        mainPager.init();
     }
 
     @Override

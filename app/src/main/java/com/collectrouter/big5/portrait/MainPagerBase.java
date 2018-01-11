@@ -9,4 +9,5 @@ import android.view.View;
 public interface MainPagerBase {
     View getRootView();
     String getPageTitle();
+    void init();
 }
